@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starscapes</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: Verdana, sans-serif;
+    }
+    .left {
+      float: left;
+      padding-right: 20px;
+    }
+  </style>
+  <div id='container'></div>
+  <div class="left">
+      <h4>Colors</h4>
+      <table >
+          <tbody>
+            <tr>
+              <td>Sky color 1</td>
+              <td><input type="color" id="skyColor1"/></td>
+            </tr>
+            <tr>
+              <td>Sky color 2</td>
+              <td><input type="color" id="skyColor2"/></td>
+            </tr>
+            <tr>
+              <td>Sky accent 1</td>
+              <td><input type="color"  id="skyAccentColor1"/></td>
+            </tr>
+            <tr>
+              <td>Sky accent 2</td>
+              <td><input type="color"  id="skyAccentColor2"/></td>
+            </tr>
+            <tr>
+                <td>Star color 1</td>
+                <td><input type="color" id="starColor1"/></td>
+              </tr>
+              <tr>
+                <td>Star color 2</td>
+                <td><input type="color"  id="starColor2"/></td>
+              </tr>
+            <tr>
+              <td>Mountain color 1</td>
+              <td><input type="color" id="mountainColor1"/></td>
+            </tr>
+            <tr>
+              <td>Mountain color 2</td>
+              <td><input type="color"  id="mountainColor2"/></td>
+            </tr>
+            <tr>
+              <td>Cloud color</td>
+              <td><input type="color" id="cloudColor1"/></td>
+            </tr>
+            
+          </tbody>
+        </table>
+    </div>
+  <div class="left">
+      <h4>Seed</h4>
+      <input type="number" name="mode" value="0" id="seedText">
+      <button onclick="generate()">Generate</button>
+      <button onclick="generateRandom()">Generate random</button>
+    </div>
+  
+  
+ 
+  <div class="left">
+    <h4>Mode</h4>
+    <input type="radio" name="mode" value="lines" id="modeSelectLines">
+    <label >Lines</label><br>
+    <input type="radio" name="mode" value="circles" checked >
+    <label >Circles</label><br>
+  </div>
+  
+  <div class="left">
+    <h4>Resolution</h4>
+    
+    <input type="number" name="width" value="600" min = "1" id="resolutionX">
+    <label for="width">Width</label><br>
+
+    <input type="number" name="height" value="900" min = "1"  id="resolutionY">
+    <label for="height">Height</label><br>
+  </div>
+
+  <div class="left">
+      <h4>Details</h4>
+      
+      <input type="number" name="mountain-detail" value="5" style="width: 40px" min = "1"  id="mountainDetail">
+      <label for="mountain-detail">Mountain</label><br>
+  
+      <input type="number" name="particle-detail" value="15" style="width: 40px" min = "1" id="particleDetail">
+      <label for="particle-detail">Particles</label><br>
+
+      <div>
+        The lower you go the more detailed it gets, with 1 being max details. Recommended to not go much lower on these unless you have a powerful machine. Page might tell you that a script is slowing it down, but if you wait it will complete eventually.
+      </div>
+    </div>
+
+  <script src="p5.min.js"></script>
+  <script src="index.js"></script>
+  <script src="sketch.js"></script>
+  <script src="fields.js"></script>
+  <script src="FieldDrawer.js"></script>
+  <script src="PaintParticle.js"></script>
+  <script src="StarParticle.js"></script>
+</head>
+
+<body>
+  <main>
+  </main>
+</body>
+
+</html>
